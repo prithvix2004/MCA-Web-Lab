@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String and Math Functions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            background-color: #fafafa;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        .output {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            color: #d35400;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>JavaScript Predefined Objects</h1>
+
+    <!-- STRING OBJECT SECTION -->
+    <div class="section">
+        <h2>1. String Object Methods</h2>
+        <div class="form-group">
+            <label for="stringInput">Enter a sample text string:</label>
+            <input type="text" id="stringInput" value="Hello, JavaScript World!">
+        </div>
+        <button onclick="demonstrateStrings()">Run String Methods</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                    <th>Result Output</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>.length</code> (Property)</td>
+                    <td>Returns the total number of characters.</td>
+                    <td id="strLength" class="output">-</td>
+                </tr>
+                <tr>
+                    <td><code>.toUpperCase()</code></td>
+                    <td>Converts all characters to uppercase.</td>
+                    <td id="strUpper" class="output">-</td>
+                </tr>
+                <tr>
+                    <td><code>.toLowerCase()</code></td>
+                    <td>Converts all characters to lowercase.</td>
+                    <td id="strLower" class="output">-</td>
+                </tr>
+                <tr>
+                    <td><code>.charAt(7)</code></td>
+                    <td>Returns the character at index 7.</td>
+                    <td id="strCharAt" class="output">-</td>
+                </tr>
+                <tr>
+                    <td><code>.indexOf('Java')</code></td>
+                    <td>Returns the starting index of the word 'Java'.</td>
+                    <td id="strIndexOf" class="output">-</td>
+                </tr>
+                <tr>
+                    <td><code>.slice(7, 17)</code></td>
+                    <td>Extracts a section from index 7 up to 17.</td>
+                    <td id="strSlice" class="output">-</td>
+                </tr>
+                <tr>
+                    <td><code>.replace('World', 'Universe')</code></td>
+                    <td>Replaces 'World' with 'Universe'.</td>
+                    <td id="strReplace" class="output">-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- MATH OBJECT SECTION -->
+    <div class="section">
+        <h2>2. Math Object Methods</h2>
+        <div class="form-group">
+            <label for="mathInput">Enter a decimal number (e.g., -4.7):</label>
+            <input type="number" id="mathInput" value="-4.7" step="any">
+        </div>
+        <button onclick="demonstrateMath()">Run Math Methods</button>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                    <th>Result Output</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>Math.abs(x)</code></td>
+                    <td>Returns the absolute (positive) value.</td>
+                    <td id="mathAbs" class="output">-</td>
+                </tr>
+                <tr>
+                    <td><code>Math.ceil(x)</code></td>
+                    <td>Rounds the number UP to the nearest integer.</td>
+                    <td id="mathCeil" class="output">-</td>
+                </tr>
+                <tr>
+                    <td><code>Math.floor(x)</code></td>
+                    <td>Rounds the number DOWN to the nearest integer.</td>
+                    <td id="mathFloor" class="output">-</td>
+                </tr>
+                <tr>
+                    <td><code>Math.round(x)</code></td>
+                    <td>Rounds to the nearest integer.</td>
+                    <td id="mathRound" class="output">-</td>
+                </tr>
+                <tr>
+                    <td><code>Math.sqrt(Math.abs(x))</code></td>
+                    <td>Returns the square root of the absolute value.</td>
+                    <td id="mathSqrt" class="output">-</td>
+                </tr>
+                <tr>
+                    <td><code>Math.pow(x, 2)</code></td>
+                    <td>Squares the entered number (x squared).</td>
+                    <td id="mathPow" class="output">-</td>
+                </tr>
+                <tr>
+                    <td><code>Math.random()</code></td>
+                    <td>Generates a random decimal between 0 (inclusive) and 1 (exclusive).</td>
+                    <td id="mathRandom" class="output">-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    // Function to handle JavaScript String Manipulations
+    function demonstrateStrings() {
+        const str = document.getElementById("stringInput").value;
+
+        document.getElementById("strLength").innerText = str.length;
+        document.getElementById("strUpper").innerText = str.toUpperCase();
+        document.getElementById("strLower").innerText = str.toLowerCase();
+        document.getElementById("strCharAt").innerText = str.charAt(7);
+        document.getElementById("strIndexOf").innerText = str.indexOf('Java');
+        document.getElementById("strSlice").innerText = str.slice(7, 17);
+        document.getElementById("strReplace").innerText = str.replace('World', 'Universe');
+    }
+
+    // Function to handle JavaScript Math Operations
+    function demonstrateMath() {
+        const num = parseFloat(document.getElementById("mathInput").value);
+        
+        if (isNaN(num)) {
+            alert("Please enter a valid number");
+            return;
+        }
+
+        document.getElementById("mathAbs").innerText = Math.abs(num);
+        document.getElementById("mathCeil").innerText = Math.ceil(num);
+        document.getElementById("mathFloor").innerText = Math.floor(num);
+        document.getElementById("mathRound").innerText = Math.round(num);
+        document.getElementById("mathSqrt").innerText = Math.sqrt(Math.abs(num)).toFixed(4);
+        document.getElementById("mathPow").innerText = Math.pow(num, 2).toFixed(2);
+        document.getElementById("mathRandom").innerText = Math.random().toFixed(6);
+    }
+
+    // Run functions once initially to populate default values on load
+    window.onload = function() {
+        demonstrateStrings();
+        demonstrateMath();
+    };
+</script>
+
+</body>
+</html>
