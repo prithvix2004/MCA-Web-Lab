@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | MCET</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            width: 300px;
+            height: auto;
+        }
+
+        h1 {
+            color: #1e3a8a;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #2563eb;
+            margin-bottom: 25px;
+        }
+
+        h3 {
+            color: #1e3a8a;
+            border-left: 4px solid #2563eb;
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            justify-items: center;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            border: 1px solid #e2e8f0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #2563eb;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: #1e3a8a;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header with Logo -->
+        <div class="header-section">
+            <img src="MCETLogo.jpg" alt="MCET Logo" class="logo">
+            <div style="text-align: right;">
+                <span style="font-size: 0.9rem; color: #64748b;">Mohandas College of Engineering and Technology</span>
+            </div>
+        </div>
+
+        <h1>Department Gallery</h1>
+        <div class="tagline"><b>Department of Computer Applications</b></div>
+
+        <h3>PTA Annual General Meeting</h3>
+        <div class="gallery-grid">
+            <img src="PTA-AGM1.jpeg" alt="PTA AGM 1" class="gallery-item">
+            <img src="PTA-AGM2.jpeg" alt="PTA AGM 2" class="gallery-item">
+            <img src="PTA-AGM3.jpeg" alt="PTA AGM 3" class="gallery-item">
+            <img src="PTA-AGM4.jpeg" alt="PTA AGM 4" class="gallery-item">
+            <img src="PTA-AGM5.jpeg" alt="PTA AGM 5" class="gallery-item">
+        </div>
+
+        <a href="index.html" class="back-link">&larr; Back to Home</a>
+    </div>
+
+</body>
+</html>
