@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Exam Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="exam-container" id="exam-container">
+        <div class="exam-header">
+            <h2>General Knowledge Certification</h2>
+            <div id="timer-box">Time Left: <span id="timer">02:00</span></div>
+        </div>
+
+        <div id="quiz-section">
+            <div class="question-number" id="q-number">Question 1 of 3</div>
+            <div class="question-text" id="q-text">Loading question...</div>
+            <div class="options-container" id="options-box">
+                <!-- JavaScript inserts options dynamically here -->
+            </div>
+        </div>
+
+        <div class="exam-footer">
+            <button id="prev-btn" onclick="changeQuestion(-1)" disabled>Previous</button>
+            <button id="next-btn" onclick="changeQuestion(1)">Next</button>
+            <button id="submit-btn" class="submit-btn hidden" onclick="gradeExam(true)">Submit Exam</button>
+        </div>
+    </div>
+
+    <div class="result-container hidden" id="result-container">
+        <h2>Exam Summary</h2>
+        <div class="score-board">
+            <p>Total Questions: <span id="res-total">0</span></p>
+            <p>Correct Answers: <span id="res-correct">0</span></p>
+            <p>Your Score: <span id="res-score">0%</span></p>
+            <p>Status: <b id="res-status">N/A</b></p>
+        </div>
+        <button onclick="location.reload()">Restart Exam</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
