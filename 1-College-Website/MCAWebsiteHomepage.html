@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Computer Science | MCET</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #3b82f6;
+            --accent: #06b6d4;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 5%;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--primary);
+        }
+
+        .logo img {
+            width: 120px;
+            height: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--dark);
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-light);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white !important;
+            padding: 0.6rem 1.25rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-light);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        header.hero {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 10rem 5% 6rem 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 90vh;
+            gap: 3rem;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content h1 span {
+            color: var(--accent);
+        }
+
+        .hero-content p {
+            font-size: 1.15rem;
+            color: #cbd5e1;
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-outline {
+            border: 2px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 0.6rem 1.25rem;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-outline:hover {
+            border-color: white;
+            background: rgba(255,255,255,0.1);
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Stats Section */
+        .stats {
+            background: white;
+            padding: 3rem 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .stat-item h3 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .stat-item p {
+            color: var(--gray);
+            font-weight: 500;
+        }
+
+        /* Section Commons */
+        section {
+            padding: 6rem 5%;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem auto;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        /* Research Areas Grid */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+
+        .card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* News & Events Section */
+        .news-section {
+            background: white;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .news-card {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            background: white;
+        }
+
+        .news-content {
+            padding: 1.5rem;
+        }
+
+        .news-date {
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .news-content h3 {
+            font-size: 1.15rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .news-content p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .read-more {
+            color: var(--primary);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .read-more:hover {
+            color: var(--primary-light);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: #94a3b8;
+            padding: 4rem 5% 2rem 5%;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media(max-width: 768px) {
+            header.hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 8rem;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .nav-links {
+                display: none; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <img src="MCETLogo.jpg" alt="MCET Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="department.html">About</a></li>
+            <li><a href="HODProfile.html">HOD Profile</a></li>
+            <li><a href="facultydetails.html">Faculty</a></li>
+            <li><a href="MCAAssociationDetails.html">Association</a></li>
+            <li><a href="Gallery.html" class="btn-primary">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Department of Computer Application</h1>
+            <p>Welcome to the Department of Computer Application. We pioneer ground-breaking research, cultivate world-class software engineers, and drive digital evolution.</p>
+            <div class="hero-buttons">
+                <a href="#academics" class="btn-primary">Explore Programs</a>
+                <a href="#research" class="btn-outline">Our Research</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Students collaborating on code">
+        </div>
+    </header>
+
+    <!-- Statistics Section -->
+    <div class="stats">
+        <div class="stat-item">
+            <h3>2 Years</h3>
+            <p>Duration</p>
+        </div>
+        <div class="stat-item">
+            <h3>Full Time</h3>
+            <p>Mode</p>
+        </div>
+        <div class="stat-item">
+            <h3>Min 50%</h3>
+            <p>Eligibility</p>
+        </div>
+        <div class="stat-item">
+            <h3>60 Seats</h3>
+            <p>Intake</p>
+        </div>
+    </div>
+
+    <!-- Research Areas Section -->
+    <section id="research">
+        <div class="section-header">
+            <h2>Master of Computer Applications (MCA)</h2>
+            <p>Innovate. Develop. Lead the Digital Future.</p>
+        </div>
+        <div class="research-grid">
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
+                <h3>Eligibility</h3>
+                <p>Candidates who have completed a Bachelor's degree in the relevant discipline from a recognized university and satisfy the eligibility criteria prescribed by APJ Abdul Kalam Technological University (KTU) and the Government of Kerala are eligible for admission to the MCA programme.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3>The MCET Advantage</h3>
+                <p>The MCA programme at MCET is designed to create industry-ready professionals through a combination of quality education, practical learning, and professional skill development.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-network-wired"></i></div>
+                <h3>Add-on Certifications</h3>
+                <p>To complement the university curriculum, MCET offers specialized add-on courses that equip students with practical knowledge of industry-leading technologies and tools.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon"><i class="fa-solid fa-vr-cardboard"></i></div>
+                <h3>Career & Placement</h3>
+                <p>The Career Guidance and Placement Cell (CGPC) functions as a dedicated platform for enhancing students' employability through continuous training, industry interaction, and campus recruitment support.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- News and Events Section -->
+    <section id="news" class="news-section">
+        <div class="section-header">
+            <h2>Department News & Events</h2>
+            <p>Stay up to date with the latest milestones, seminars, and breakthroughs from our community.</p>
+        </div>
+        <div class="news-grid">
+            <div class="news-card">
+                <div class="news-content">
+                    <span class="news-date">October 14, 2026</span>
+                    <h3>Annual Hackathon 2026 Announced</h3>
+                    <p>Register now for 48 hours of pure innovation, coding challenges, and mentoring from top tech leaders.</p>
+                    <a href="#" class="read-more">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="news-card">
+                <div class="news-content">
+                    <span class="news-date">September 28, 2026</span>
+                    <h3>Breakthrough in Quantum Encryption</h3>
+                    <p>Our lab published a path-breaking paper on post-quantum cryptography accepted at IEEE Symposium.</p>
+                    <a href="#" class="read-more">Read Paper <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="news-card">
+                <div class="news-content">
+                    <span class="news-date">September 12, 2026</span>
+                    <h3>Industry Tech Talk: AI in Healthcare</h3>
+                    <p>Join guest speaker Dr. Elena Vance as she discusses how deep learning is revolutionizing diagnostics.</p>
+                    <a href="#" class="read-more">View Details <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>Department of Computer Application</h4>
+                <p>Empowering minds, advancing code, and engineering the future of global technology.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="department.html">About Us</a></li>
+                    <li><a href="HODProfile.html">HOD Profile</a></li>
+                    <li><a href="facultydetails.html">Faculty Details</a></li>
+                    <li><a href="MCAAssociationDetails.html">Association</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="#">Student Portal</a></li>
+                    <li><a href="#">Course Catalog</a></li>
+                    <li><a href="#">Safety & Compliance</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> Mohandas College of Engineering and Technology</li>
+                    <li><i class="fa-solid fa-envelope"></i> mca-info@mcet.edu</li>
+                    <li><i class="fa-solid fa-phone"></i> +91 472 2843000</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Department of Computer Application, MCET. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
