@@ -1,0 +1,2 @@
+// Adds the .dark-theme styles to the body
+document.body.classList.add("dark-theme");
