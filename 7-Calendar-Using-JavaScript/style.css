@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d0c1d;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ==========================================================================
+   Liquid Background Styles
+   ========================================================================== */
+.liquid-bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: url(#liquid-goo);
+    z-index: 1;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+.blob-1 {
+    width: 450px;
+    height: 450px;
+    background: #ff007f;
+    top: 10%;
+    left: 15%;
+    animation: float-around 20s infinite alternate ease-in-out;
+}
+
+.blob-2 {
+    width: 500px;
+    height: 500px;
+    background: #00f2fe;
+    bottom: 10%;
+    right: 10%;
+    animation: float-around 25s infinite alternate-reverse ease-in-out;
+}
+
+.blob-3 {
+    width: 350px;
+    height: 350px;
+    background: #7f00ff;
+    top: 35%;
+    left: 45%;
+    animation: float-around 18s infinite alternate ease-in-out;
+}
+
+@keyframes float-around {
+    0% { transform: translate(0px, 0px) scale(1); }
+    33% { transform: translate(70px, -50px) scale(1.1); }
+    66% { transform: translate(-50px, 60px) scale(0.95); }
+    100% { transform: translate(0px, 0px) scale(1); }
+}
+
+/* ==========================================================================
+   Glassmorphic Calendar Container
+   ========================================================================== */
+.calendar-glass-card {
+    position: relative;
+    z-index: 10;
+    width: 380px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    
+    /* Frosted Blur Core Engine */
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   Calendar Internal Elements
+   ========================================================================== */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 5px;
+}
+
+.calendar-header h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.calendar-header button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.calendar-header button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    row-gap: 8px;
+}
+
+.calendar-days div {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+/* Day Highlight States */
+.calendar-days div:not(.empty-day):not(.today):hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    cursor: pointer;
+}
+
+.calendar-days .today {
+    background: #ffffff;
+    color: #0d0c1d;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.empty-day {
+    visibility: hidden;
+}
