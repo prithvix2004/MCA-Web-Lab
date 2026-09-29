@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Event Handling</title>
+    <style>
+        .box { width: 200px; height: 100px; background-color: lightgray; margin: 10px 0; padding: 20px; text-align: center; }
+        .highlight { background-color: gold; }
+    </style>
+</head>
+<body>
+
+    <button id="myButton">Click Me</button>
+    <div id="hoverBox" class="box">Hover over me!</div>
+    
+    <form id="myForm">
+        <input type="text" id="username" placeholder="Type something...">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // 1. Select the DOM elements
+        const button = document.getElementById('myButton');
+        const hoverBox = document.getElementById('hoverBox');
+        const myForm = document.getElementById('myForm');
+        const usernameInput = document.getElementById('username');
+
+        // 2. Click Event (Basic syntax)
+        button.addEventListener('click', (event) => {
+            // 'event' is an object containing details about what happened
+            console.log('Button was clicked!', event.target);
+            alert('Button clicked!');
+        });
+
+        // 3. Mouse Events (Hover behavior)
+        hoverBox.addEventListener('mouseover', () => {
+            hoverBox.classList.add('highlight');
+            hoverBox.textContent = 'Pointer is inside!';
+        });
+
+        hoverBox.addEventListener('mouseout', () => {
+            hoverBox.classList.remove('highlight');
+            hoverBox.textContent = 'Hover over me!';
+        });
+
+        // 4. Keyboard & Input Events
+        usernameInput.addEventListener('input', (event) => {
+            // Capture the current value as the user types
+            console.log(`Current input: ${event.target.value}`);
+        });
+
+        // 5. Form Event & Preventing Default Behavior
+        myForm.addEventListener('submit', (event) => {
+            // Stop the browser from refreshing the page on form submission
+            event.preventDefault(); 
+            
+            console.log(`Form submitted with username: ${usernameInput.value}`);
+        });
+    </script>
+</body>
+</html>
