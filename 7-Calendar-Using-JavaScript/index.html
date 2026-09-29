@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar (2026)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Liquid Background Layer -->
+    <div class="liquid-bg-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- SVG Filter for the Liquid Goo Effect -->
+    <svg xmlns="http://w3.org" version="1.1" style="display: none;">
+        <defs>
+            <filter id="liquid-goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="40" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 80 -20" result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- Glassmorphic Calendar Card -->
+    <div class="calendar-glass-card">
+        <div class="calendar-header">
+            <button id="prev-btn">&lt;</button>
+            <h2 id="month-year-display"></h2>
+            <button id="next-btn">&gt;</button>
+        </div>
+        
+        <div class="weekdays">
+            <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+        </div>
+        
+        <div class="calendar-days" id="days-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
