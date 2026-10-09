@@ -110,7 +110,7 @@ This repository is primarily intended for academic and learning purposes. It con
 
 ## Author
 
-Created for MCA Web Lab academic work.
+Prithvi | Created for MCA Web Lab academic work.
 
 ## License
 
