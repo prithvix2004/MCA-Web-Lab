@@ -1,61 +1,40 @@
 # MCA Web Lab
 
-This repository contains a collection of web development laboratory exercises completed as part of the Master of Computer Applications (MCA) curriculum. The projects focus on foundational web technologies such as HTML, CSS, and JavaScript, and demonstrate practical implementation of static web pages, forms, styling, DOM manipulation, and client-side interactivity.
+A collection of frontend web development lab exercises completed as part of the Master of Computer Applications (MCA) curriculum. This repository focuses on practical implementation of HTML, CSS, and JavaScript through small, interactive web applications and static pages.
 
-## Academic Purpose
+## Overview
 
-This repository is intended for academic learning and practice. It is designed to help students:
+This repository contains multiple mini-projects and lab assignments designed to help students learn and practice core web technologies. Each folder demonstrates a different concept, from basic webpage structure and styling to interactive JavaScript functionality and DOM events.
 
-- understand the basics of web page structure using HTML
-- apply CSS for layout, presentation, and styling
-- implement JavaScript for interactive behavior and events
-- build small real-world web applications and lab exercises
-- strengthen practical understanding of front-end development concepts
+## Features
 
-## Repository Overview
+- Multi-page static college website built with HTML
+- CSS styling demonstrations using inline, internal, and external CSS
+- Student registration form with structured form design
+- JavaScript predefined function examples
+- Online exam interface with quiz logic
+- Dynamic background color changer using JavaScript
+- Functional calendar built with JavaScript
+- Event-handling examples for interactive user actions
 
-The repository includes multiple lab assignments covering different topics in web programming:
+## Experiments Included
 
-1. College Website
-2. Types of CSS
-3. Registration Form
-4. JavaScript Predefined Functions
-5. Online Exam
-6. Background Change Using JavaScript
-7. Calendar Using JavaScript
-8. JavaScript Event Handling
+| No. | Folder | Description |
+|------|--------|-------------|
+| 1 | `1-College-Website` | Multi-page college website with departments, faculty info, gallery, and association details |
+| 2 | `2-Types-of-CSS` | Demonstration of different CSS implementation methods |
+| 3 | `3-Registration-Form` | HTML form styled using CSS for registration and input layout |
+| 4 | `4-JavaScript-Predefined-Functions` | Examples of built-in JavaScript functions in browser scripts |
+| 5 | `5-Online-Exam` | A simple online quiz/exam interface with JavaScript logic |
+| 6 | `6-Background-Change-Using-JS` | Dynamic background color change using JavaScript |
+| 7 | `7-Calendar-Using-JavaScript` | Interactive JavaScript calendar application |
+| 8 | `8-JavaScript-Event-Handling` | Examples of event handling such as click and mouse interactions |
 
-## Technology Stack
+## Tech Stack
 
-- HTML
-- CSS
-- JavaScript
-
-## Lab Experiments Included
-
-### 1. College Website
-A multi-page static website representing a college portal with sections such as department information, faculty details, gallery, and association details.
-
-### 2. Types of CSS
-Demonstrates different ways of applying CSS, including inline, internal, and external styling.
-
-### 3. Registration Form
-A student/employee registration form with structured HTML and styled CSS for form layout and presentation.
-
-### 4. JavaScript Predefined Functions
-Examples of JavaScript built-in functions and their usage in browser-based scripting.
-
-### 5. Online Exam
-A simple online examination interface with JavaScript-driven logic for question handling and evaluation.
-
-### 6. Background Change Using JavaScript
-A mini application that changes the webpage background dynamically based on selected colors or events.
-
-### 7. Calendar Using JavaScript
-A JavaScript-powered calendar that displays dates and supports date-related functionality.
-
-### 8. JavaScript Event Handling
-Examples of client-side events such as click, mouseover, and form interactions.
+- HTML5
+- CSS3
+- JavaScript (Vanilla JS)
 
 ## Project Structure
 
@@ -89,7 +68,8 @@ MCA-Web-Lab/
 │   └── style.css
 ├── 8-JavaScript-Event-Handling/
 │   └── HTMLFile.html
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
 ## How to Run
@@ -100,36 +80,38 @@ MCA-Web-Lab/
 git clone https://github.com/prithvix2004/MCA-Web-Lab.git
 ```
 
-2. Open the project folder.
-3. Navigate to any experiment folder.
-4. Open the `.html` file in a browser.
+2. Open the project folder in your local machine.
 
-For most exercises, no additional server setup is required because they are static front-end web pages.
+3. Navigate to any experiment directory.
+
+4. Open the corresponding `.html` file in a browser.
+
+Most of the projects are static HTML/CSS/JS pages, so they can be run without any server setup.
 
 ## Prerequisites
 
 - A modern web browser (Chrome, Firefox, Edge, etc.)
-- Basic understanding of HTML, CSS, and JavaScript
-- Optional: VS Code or any text editor for editing code
+- Basic knowledge of HTML, CSS, and JavaScript
+- Optional: VS Code or any code editor
 
 ## Learning Outcomes
 
-By completing the exercises in this repository, students can:
+By working through this repository, students can:
 
-- create structured web pages using semantic HTML
-- style content with CSS for readability and design
-- use JavaScript for dynamic content updates
-- implement styling and interactivity in client-side applications
-- understand event-driven programming concepts in web development
+- Build structured web pages using HTML
+- Style pages effectively using CSS
+- Use JavaScript to create interactive behavior
+- Understand event-driven programming in the browser
+- Develop small front-end applications and lab exercises
 
 ## Notes
 
-This repository is maintained for educational and laboratory practice purposes. It reflects a beginner-to-intermediate level understanding of web development and serves as a practical record of coursework.
-
-## License
-
-This project is intended for academic learning purposes. Please use it responsibly and in accordance with institutional and academic guidelines.
+This repository is primarily intended for academic and learning purposes. It contains beginner-to-intermediate level frontend development exercises and demonstrates practical implementation of common web concepts.
 
 ## Author
 
 Created for MCA Web Lab academic work.
+
+## License
+
+This project is intended for educational use. Please use it responsibly and in accordance with institutional or academic guidelines.
