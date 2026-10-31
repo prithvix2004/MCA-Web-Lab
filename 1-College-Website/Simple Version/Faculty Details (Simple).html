@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty Details | MCET</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    /* Header Section */
+    .header-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+    .logo { width: 300px; height: auto; }
+    h1, .tagline { text-align: center; margin: 0 0 10px; }
+    h1 { color: #1e3a8a; }
+    .tagline { color: #2563eb; font-size: 1.2rem; margin-bottom: 25px; }
+
+    /* Faculty Cards Layout */
+    h3 {
+      color: #1e3a8a;
+      border-left: 4px solid #2563eb;
+      padding-left: 10px;
+      margin-top: 30px;
+    }
+    .faculty-card {
+      display: flex;
+      gap: 30px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 25px;
+      border-radius: 8px;
+    }
+    .faculty-img {
+      width: 180px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .faculty-details p { margin: 0 0 15px; color: #334155; }
+    
+    /* Utilities */
+    hr { border: 0; height: 1px; background: #e2e8f0; margin: 30px 0; }
+    .back-link { color: #2563eb; font-weight: 600; text-decoration: none; }
+    .back-link:hover { text-decoration: underline; color: #1e3a8a; }
+
+    /* Responsive Mobile View */
+    @media (max-width: 650px) {
+      .faculty-card { flex-direction: column; align-items: center; text-align: center; }
+      .header-section { flex-direction: column; text-align: center; gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header Section -->
+    <div class="header-section">
+      <img src="MCETLogo.jpg" alt="MCET Logo" class="logo">
+      <div style="color: #64748b; font-size: 0.9rem;">Mohandas College of Engineering and Technology</div>
+    </div>
+
+    <h1>Faculty Member Details</h1>
+    <div class="tagline"><b>Department of Computer Applications</b></div>
+
+    <!-- Faculty Member 1 -->
+    <h3>Associate Professor - Rekha M Pillai</h3>
+    <div class="faculty-card">
+      <img src="Rekha.jpg" alt="Rekha M Pillai" class="faculty-img">
+      <div class="faculty-details">
+        <p><b>ACADEMICS</b><br>MCA from University of Rajasthan<br>B.Sc. Chemistry from University of Kerala</p>
+        <p><b>Areas of Interest</b><br>Computer Networks, Database Management Systems</p>
+        <p><b>Experience</b><br>1 year as System Analyst in IHRD Polytechnic, Karunagapally<br>16.5 years as Assistant Professor in MCET</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- Faculty Member 2 -->
+    <h3>Associate Professor - R. Sujitha</h3>
+    <div class="faculty-card">
+      <img src="Sujitha.jpg" alt="R Sujitha" class="faculty-img">
+      <div class="faculty-details">
+        <p><b>Experience</b></p>
+        <p><b>Software Industry:</b><br>Programmer at EDat Solutions Pvt Ltd (Sept 2006 - Sept 2007)</p>
+        <p><b>Teaching:</b><br>• Teacher at Christ Nagar Hr.Sec.School<br>• Assistant Professor (MCA) at Lourdes Matha College<br>• Teacher at LaChatelaine Residential Junior College</p>
+      </div>
+    </div>
+
+    <br>
+    <a href="index.html" class="back-link">&larr; Back to Home</a>
+  </div>
+
+</body>
+</html>
