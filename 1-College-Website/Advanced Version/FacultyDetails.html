@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Details | MCET</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            width: 300px;
+            height: auto;
+        }
+
+        h1 {
+            color: #1e3a8a;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #2563eb;
+            margin-bottom: 25px;
+        }
+
+        h3 {
+            color: #1e3a8a;
+            border-left: 4px solid #2563eb;
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+
+        .faculty-card {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .faculty-img {
+            width: 180px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            flex-shrink: 0;
+        }
+
+        .faculty-details {
+            flex-grow: 1;
+        }
+
+        .faculty-details p {
+            margin: 10px 0;
+            color: #334155;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #e2e8f0;
+            margin: 30px 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #2563eb;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: #1e3a8a;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 650px) {
+            .faculty-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header with Logo -->
+        <div class="header-section">
+            <img src="MCETLogo.jpg" alt="MCET Logo" class="logo">
+            <div style="text-align: right;">
+                <span style="font-size: 0.9rem; color: #64748b;">Mohandas College of Engineering and Technology</span>
+            </div>
+        </div>
+
+        <h1>Faculty Member Details</h1>
+        <div class="tagline"><b>Department of Computer Applications</b></div>
+
+        <!-- Faculty Member 1 -->
+        <h3>Associate Professor - Rekha M Pillai</h3>
+        <div class="faculty-card">
+            <img src="Rekha.jpg" alt="Rekha M Pillai" class="faculty-img">
+            <div class="faculty-details">
+                <p><b>ACADEMICS</b><br>
+                MCA from University of Rajasthan<br>
+                B.Sc. Chemistry from University of Kerala</p>
+
+                <p><b>Areas of Interest</b><br>
+                Computer Networks, Database Management Systems</p>
+
+                <p><b>Experience</b><br>
+                1 year as System Analyst in IHRD Polytechnic, Karunagapally<br>
+                16 and a half years teaching experience as Assistant Professor in Mohandas College of Engineering and Technology</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Faculty Member 2 -->
+        <h3>Associate Professor - R. Sujitha</h3>
+        <div class="faculty-card">
+            <img src="Sujitha.jpg" alt="R Sujitha" class="faculty-img">
+            <div class="faculty-details">
+                <p><b>Experience</b><br>
+                <u>Software Industry:</u><br>
+                EDat Solutions Pvt Ltd, Thiruvananthapuram (Sept 2006 to Sept 2007)<br>
+                Role: Programmer<br><br>
+                <u>Teaching:</u><br>
+                Christ Nagar Hr.Sec.School, Trivandrum (Role: Teacher)<br>
+                Lourdes Matha College of Science and Technology, Trivandrum (Role: Assistant Professor in MCA department)<br>
+                LaChatelaine Residential Junior College, Chennai (Role: Teacher)</p>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-link">&larr; Back to Home</a>
+    </div>
+
+</body>
+</html>
